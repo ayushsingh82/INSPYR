@@ -102,8 +102,8 @@ export default function Home() {
           </div>
 
           {/* New Section with Green Background */}
-          <div className="bg-[#20D55A] py-16 px-6 mx-6">
-            <div className="max-w-full mx-auto">
+          <div className="bg-[#20D55A] py-16 px-6 -mx-6 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+            <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Left Side Content */}
                 <div className="space-y-6 text-white">
@@ -149,15 +149,13 @@ export default function Home() {
           </div>
 
           {/* Best Creators Section */}
-          <div className="bg-[#18181C] py-16 px-6 -mx-6">
+          <div className="bg-[#18181C] py-16 px-6 -mx-6 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-8">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                   Best Creators
                 </h3>
-                <p className="text-sm text-gray-300">
-                  Show profile for best creators
-                </p>
+            
               </div>
               
               {/* Creator Profiles Grid */}
@@ -257,140 +255,21 @@ export default function Home() {
           <div className="py-16 px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                  Top Content Creators
-                </h3>
-                <p className="text-sm text-gray-600">
-                  People love to pay
-                </p>
+               
               </div>
               
-              {/* Creator Categories Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                {/* DeFi Degens */}
-                <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <span className="text-2xl mr-3">🧠</span>
-                    <h4 className="text-lg font-bold text-gray-900">DeFi Degens</h4>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-4">
-                    The minds behind the protocols that move billions.
+              {/* Simple Green Box */}
+              <div className="bg-[#20D55A] p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+                <div className="text-center space-y-6">
+                  <h4 className="text-xl font-bold text-black">
+                    Ready to Inspire & Earn  $INSP Tokens?
+                  </h4>
+                  <p className="text-sm text-black leading-relaxed">
+                  Listen. Get Inspired. Earn. Complete inspiration journeys and claim your share of 10M $INSPYR — where every spark of motivation rewards you.
                   </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/vivek_degen" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@vivek_degen</a>
-                      <span className="text-xs text-gray-500">Drops alpha on DeFi yield strategies</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/realYielder" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@realYielder</a>
-                      <span className="text-xs text-gray-500">Breaking down complex lending protocols</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/LPwhale" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@LPwhale</a>
-                      <span className="text-xs text-gray-500">Charts, yield farms, and new liquidity pools</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Meme Masters */}
-                <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <span className="text-2xl mr-3">🐸</span>
-                    <h4 className="text-lg font-bold text-gray-900">Meme Masters</h4>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Memes that move markets.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/shitcoin_sage" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@shitcoin_sage</a>
-                      <span className="text-xs text-gray-500">Meme coin trader with laser-sharp instincts</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/basedmfer" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@basedmfer</a>
-                      <span className="text-xs text-gray-500">The meme whisperer. Behind $BASED and $LOOT</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/SolanaMemeLord" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@SolanaMemeLord</a>
-                      <span className="text-xs text-gray-500">Solana-native memetic genius</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* NFT Storytellers */}
-                <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <span className="text-2xl mr-3">🎨</span>
-                    <h4 className="text-lg font-bold text-gray-900">NFT Storytellers</h4>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-4">
-                    From PFPs to digital sagas.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/jpegthinker" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@jpegthinker</a>
-                      <span className="text-xs text-gray-500">Threads on the cultural side of NFTs</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/MetaMuseNFT" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@MetaMuseNFT</a>
-                      <span className="text-xs text-gray-500">NFT collector and curator with weekly recaps</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/0xArtVibes" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@0xArtVibes</a>
-                      <span className="text-xs text-gray-500">Digital artist experimenting with generative AI + NFTs</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Web3 x AI */}
-                <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <span className="text-2xl mr-3">🤖</span>
-                    <h4 className="text-lg font-bold text-gray-900">Web3 x AI</h4>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Where intelligence meets the chain.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/promptprotocol" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@promptprotocol</a>
-                      <span className="text-xs text-gray-500">Building the LLM layer on-chain</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/zkai_labs" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@zkai_labs</a>
-                      <span className="text-xs text-gray-500">Merging ZK with AI agents</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/chainagentx" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@chainagentx</a>
-                      <span className="text-xs text-gray-500">Explains autonomous agents and intent protocols</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* L2 Believers */}
-                <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <span className="text-2xl mr-3">🧱</span>
-                    <h4 className="text-lg font-bold text-gray-900">L2 Believers</h4>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Scaling the future of blockchain.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/rollup_ranger" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@rollup_ranger</a>
-                      <span className="text-xs text-gray-500">Comparing Optimistic vs ZK rollups weekly</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/basevibes" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@basevibes</a>
-                      <span className="text-xs text-gray-500">Threads on Base ecosystem growth</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="https://x.com/altlayeralpha" target="_blank" rel="noopener noreferrer" className="text-sm text-[#20D55A] hover:underline">@altlayeralpha</a>
-                      <span className="text-xs text-gray-500">Following the rise of AltLayer, Eclipse, and more</span>
-                    </div>
-                  </div>
+                  <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                    Start Inspiring & Earning
+                  </button>
                 </div>
               </div>
             </div>
