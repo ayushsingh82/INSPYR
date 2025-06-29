@@ -72,7 +72,7 @@ export default function Home() {
               <p className="text-sm text-gray-600 leading-relaxed max-w-3xl mx-auto  shadow-lg shadow-gray-200 rounded-lg p-4">
                 A creator circle. A vibe engine. A cheat code for launching on INS.
                 <br />
-                We're building the platform behind the most uplifting Web3 experiences — and helping creators inspire the world too.
+                We&apos;re building the platform behind the most uplifting Web3 experiences — and helping creators inspire the world too.
               </p>
             </div>
 
@@ -95,7 +95,7 @@ export default function Home() {
               <div className="bg-gray-50 p-6 rounded-lg border border-[#20D55A]">
                 <h4 className="text-lg font-semibold text-gray-900 mb-3">Launch Cheat Code</h4>
                 <p className="text-sm text-gray-600">
-                  Early access to tools, rewards, and drops from the minds behind Web3's most feel-good launches.
+                  Early access to tools, rewards, and drops from the minds behind Web3&apos;s most feel-good launches.
                 </p>
               </div>
             </div>
@@ -114,29 +114,29 @@ export default function Home() {
                     INS Studio is founded by builders who believe attention is currency — and creativity is capital.
                   </p>
                   <p className="text-sm leading-relaxed">
-                    We've seen creators grind for exposure, only to get pennies. That's broken.
+                    We&apos;ve seen creators grind for exposure, only to get pennies. That&apos;s broken.
                   </p>
                   <p className="text-sm leading-relaxed">
-                    INSPYR Studio flips the script: it's a launchpad for emotional value, audio collectibles, and micro-moments that make people feel something — and reward creators in real time.
+                    INSPYR Studio flips the script: it&apos;s a launchpad for emotional value, audio collectibles, and micro-moments that make people feel something — and reward creators in real time.
                   </p>
                   <p className="text-sm leading-relaxed">
-                    Whether you're an artist, founder, or dreamer, INSPYR is the home for those who want to build vibes, not just products.
+                    Whether you&apos;re an artist, founder, or dreamer, INSPYR is the home for those who want to build vibes, not just products.
                   </p>
                 </div>
 
                 {/* Right Side Boxed Content */}
                 <div className="bg-white p-8 rounded-lg shadow-lg">
                   <h4 className="text-xl font-bold text-gray-900 mb-4">
-                    The future of fundraising isn't about pitching VCs.
+                    The future of fundraising isn&apos;t about pitching VCs.
                   </h4>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    It's about rallying a community that believes in your vision and wants to be part of the story.
+                    It&apos;s about rallying a community that believes in your vision and wants to be part of the story.
                   </p>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    At INSPYR, we don't chase capital — we create gravity.
+                    At INSPYR, we don&apos;t chase capital — we create gravity.
                   </p>
                   <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                    When people feel aligned, they don't just fund you — they amplify you.
+                    When people feel aligned, they don&apos;t just fund you — they amplify you.
                   </p>
                   
                   {/* New Box */}
@@ -279,7 +279,7 @@ export default function Home() {
                     Ready to Inspire & Earn  $INSP Tokens?
                   </h4>
                   <p className="text-sm text-black leading-relaxed">
-                  Listen. Get Inspired. Earn. Complete inspiration journeys and claim your share of 10M $INSP — where every spark of motivation rewards you.
+                    Listen. Get Inspired. Earn. Complete inspiration journeys and claim your share of 10M $INSP — where every spark of motivation rewards you.
                   </p>
                   <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                     Start Inspiring & Earning
