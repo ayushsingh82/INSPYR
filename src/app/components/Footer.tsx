@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="w-full py-4 px-6 border-t border-gray-200 bg-white">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-sm text-gray-600">
-          Copyright © 2025 Inspyr. All rights reserved.
+          Copyright © 2025 INS. All rights reserved.
         </div>
         
         <div className="flex items-center gap-4">

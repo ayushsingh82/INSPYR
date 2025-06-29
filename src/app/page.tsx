@@ -8,7 +8,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Left - Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold" style={{ color: '#000000', backgroundColor: '#20D55A', borderRadius: '10px', padding: '3px' }}>Inspyr</h1>
+            <h1 className="text-2xl font-bold" style={{ color: '#000000', backgroundColor: '#20D55A', borderRadius: '10px', padding: '3px' }}>INSPYR</h1>
           </div>
           
           {/* Center - Navigation */}
@@ -49,7 +49,7 @@ export default function Home() {
           {/* Description */}
           <div className="space-y-4 max-w-3xl mx-auto">
             <p className="text-sm text-gray-600 leading-relaxed">
-              Stop mindlessly scrolling for motivation. Inspyr rewards you with $INSP tokens for every inspirational play, quote, or tip. Discover AI-powered uplifting audio, share positivity, and earn crypto while you grow your mindset.
+              Stop mindlessly scrolling for motivation. INS rewards you with $INSP tokens for every inspirational play, quote, or tip. Discover AI-powered uplifting audio, share positivity, and earn crypto while you grow your mindset.
             </p>
           </div>
 
@@ -63,14 +63,14 @@ export default function Home() {
             </button>
           </div>
 
-          {/* What is Inspyr Studio Section */}
+          {/* What is INS Studio Section */}
           <div className="space-y-8 max-w-4xl mx-auto mt-24">
             <div className="text-center space-y-4">
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                What is   <span className="text-[#20D55A]">Inspyr</span> Studio?
+                What is   <span className="text-[#20D55A]">INSPYR</span> Studio?
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed max-w-3xl mx-auto  shadow-lg shadow-gray-200 rounded-lg p-4">
-                A creator circle. A vibe engine. A cheat code for launching on Inspyr.
+                A creator circle. A vibe engine. A cheat code for launching on INS.
                 <br />
                 We're building the platform behind the most uplifting Web3 experiences — and helping creators inspire the world too.
               </p>
@@ -111,16 +111,16 @@ export default function Home() {
                     Inspiration meets Web3. Audio meets emotion.
                   </h3>
                   <p className="text-sm leading-relaxed">
-                    Inspyr Studio is founded by builders who believe attention is currency — and creativity is capital.
+                    INS Studio is founded by builders who believe attention is currency — and creativity is capital.
                   </p>
                   <p className="text-sm leading-relaxed">
                     We've seen creators grind for exposure, only to get pennies. That's broken.
                   </p>
                   <p className="text-sm leading-relaxed">
-                    Inspyr Studio flips the script: it's a launchpad for emotional value, audio collectibles, and micro-moments that make people feel something — and reward creators in real time.
+                    INSPYR Studio flips the script: it's a launchpad for emotional value, audio collectibles, and micro-moments that make people feel something — and reward creators in real time.
                   </p>
                   <p className="text-sm leading-relaxed">
-                    Whether you're an artist, founder, or dreamer, Inspyr is the home for those who want to build vibes, not just products.
+                    Whether you're an artist, founder, or dreamer, INSPYR is the home for those who want to build vibes, not just products.
                   </p>
                 </div>
 
@@ -133,7 +133,7 @@ export default function Home() {
                     It's about rallying a community that believes in your vision and wants to be part of the story.
                   </p>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    At Inspyr, we don't chase capital — we create gravity.
+                    At INSPYR, we don't chase capital — we create gravity.
                   </p>
                   <p className="text-sm text-gray-600 leading-relaxed mb-6">
                     When people feel aligned, they don't just fund you — they amplify you.
@@ -155,94 +155,108 @@ export default function Home() {
                 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                   Best Creators
                 </h3>
-            
+                <p className="text-sm text-gray-300">
+                  Top performers inspiring the community
+                </p>
               </div>
               
               {/* Creator Profiles Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Creator Profile Card 1 */}
-                <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 animate-pulse hover:animate-none transition-all duration-300 hover:scale-105">
+                <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-[#20D55A] transition-all duration-300 hover:scale-105 group">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-[#20D55A] rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">P</span>
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#20D55A] to-green-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-[#20D55A]/20">
+                      <span className="text-white font-bold text-xl">P</span>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold">Pasternak</h4>
+                      <h4 className="text-white font-bold text-lg group-hover:text-[#20D55A] transition-colors">Pasternak</h4>
                       <a href="https://x.com/pasternak" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-[#20D55A] transition-colors">@pasternak</a>
                     </div>
                   </div>
-                  <p className="text-gray-300 text-sm mb-4">
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                     Web3 builder and innovator pushing the boundaries of decentralized technology.
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="text-[#20D55A] text-sm font-semibold">$INSP: 5,234</span>
-                    <button className="text-white bg-[#20D55A] px-3 py-1 rounded text-sm hover:bg-green-600 transition-colors">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[#20D55A] text-lg font-bold">$INSP</span>
+                      <span className="text-white font-semibold">5,234</span>
+                    </div>
+                    <button className="bg-[#20D55A] text-black px-4 py-2 rounded-lg font-semibold hover:bg-green-400 transition-all duration-300 transform hover:scale-105">
                       Follow
                     </button>
                   </div>
                 </div>
 
                 {/* Creator Profile Card 2 */}
-                <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 animate-pulse hover:animate-none transition-all duration-300 hover:scale-105" style={{animationDelay: '0.5s'}}>
+                <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-[#20D55A] transition-all duration-300 hover:scale-105 group">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-[#20D55A] rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">E</span>
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#20D55A] to-green-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-[#20D55A]/20">
+                      <span className="text-white font-bold text-xl">E</span>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold">Edchucation</h4>
+                      <h4 className="text-white font-bold text-lg group-hover:text-[#20D55A] transition-colors">Edchucation</h4>
                       <a href="https://x.com/edchucation" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-[#20D55A] transition-colors">@edchucation</a>
                     </div>
                   </div>
-                  <p className="text-gray-300 text-sm mb-4">
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                     Educational content creator making complex topics accessible and engaging.
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="text-[#20D55A] text-sm font-semibold">$INSP: 3,567</span>
-                    <button className="text-white bg-[#20D55A] px-3 py-1 rounded text-sm hover:bg-green-600 transition-colors">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[#20D55A] text-lg font-bold">$INSP</span>
+                      <span className="text-white font-semibold">3,567</span>
+                    </div>
+                    <button className="bg-[#20D55A] text-black px-4 py-2 rounded-lg font-semibold hover:bg-green-400 transition-all duration-300 transform hover:scale-105">
                       Follow
                     </button>
                   </div>
                 </div>
 
                 {/* Creator Profile Card 3 */}
-                <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 animate-pulse hover:animate-none transition-all duration-300 hover:scale-105" style={{animationDelay: '1s'}}>
+                <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-[#20D55A] transition-all duration-300 hover:scale-105 group">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-[#20D55A] rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">M</span>
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#20D55A] to-green-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-[#20D55A]/20">
+                      <span className="text-white font-bold text-xl">M</span>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold">Mxmnci</h4>
+                      <h4 className="text-white font-bold text-lg group-hover:text-[#20D55A] transition-colors">Mxmnci</h4>
                       <a href="https://x.com/mxmnci" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-[#20D55A] transition-colors">@mxmnci</a>
                     </div>
                   </div>
-                  <p className="text-gray-300 text-sm mb-4">
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                     Creative technologist exploring the intersection of art, code, and human experience.
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="text-[#20D55A] text-sm font-semibold">$INSP: 4,890</span>
-                    <button className="text-white bg-[#20D55A] px-3 py-1 rounded text-sm hover:bg-green-600 transition-colors">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[#20D55A] text-lg font-bold">$INSP</span>
+                      <span className="text-white font-semibold">4,890</span>
+                    </div>
+                    <button className="bg-[#20D55A] text-black px-4 py-2 rounded-lg font-semibold hover:bg-green-400 transition-all duration-300 transform hover:scale-105">
                       Follow
                     </button>
                   </div>
                 </div>
 
                 {/* Creator Profile Card 4 */}
-                <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 animate-pulse hover:animate-none transition-all duration-300 hover:scale-105" style={{animationDelay: '1.5s'}}>
+                <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-[#20D55A] transition-all duration-300 hover:scale-105 group">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-[#20D55A] rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">A</span>
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#20D55A] to-green-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-[#20D55A]/20">
+                      <span className="text-white font-bold text-xl">A</span>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold">Aeyakovenko</h4>
+                      <h4 className="text-white font-bold text-lg group-hover:text-[#20D55A] transition-colors">Aeyakovenko</h4>
                       <a href="https://x.com/aeyakovenko" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-[#20D55A] transition-colors">@aeyakovenko</a>
                     </div>
                   </div>
-                  <p className="text-gray-300 text-sm mb-4">
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                     Blockchain visionary and entrepreneur building the future of decentralized systems.
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="text-[#20D55A] text-sm font-semibold">$INSP: 7,234</span>
-                    <button className="text-white bg-[#20D55A] px-3 py-1 rounded text-sm hover:bg-green-600 transition-colors">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[#20D55A] text-lg font-bold">$INSP</span>
+                      <span className="text-white font-semibold">7,234</span>
+                    </div>
+                    <button className="bg-[#20D55A] text-black px-4 py-2 rounded-lg font-semibold hover:bg-green-400 transition-all duration-300 transform hover:scale-105">
                       Follow
                     </button>
                   </div>
@@ -265,7 +279,7 @@ export default function Home() {
                     Ready to Inspire & Earn  $INSP Tokens?
                   </h4>
                   <p className="text-sm text-black leading-relaxed">
-                  Listen. Get Inspired. Earn. Complete inspiration journeys and claim your share of 10M $INSPYR — where every spark of motivation rewards you.
+                  Listen. Get Inspired. Earn. Complete inspiration journeys and claim your share of 10M $INSP — where every spark of motivation rewards you.
                   </p>
                   <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                     Start Inspiring & Earning

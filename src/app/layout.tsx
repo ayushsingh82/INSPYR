@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Inspyr - The Future of Inspiration",
+  title: "INSPYR - The Future of Inspiration",
   description: "The first Web3 inspiration platform that pays you with $INSP tokens for every inspirational play, quote, or tip.",
 };
 
