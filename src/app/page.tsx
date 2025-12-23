@@ -1,4 +1,3 @@
-import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Ticker from './components/Ticker';
 
@@ -97,7 +96,7 @@ export default function Home() {
                 </h3>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black mb-12">
                 <div className="text-center space-y-4">
                   <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto">
                     <span className="text-white font-bold text-2xl">1</span>
@@ -128,32 +127,19 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* CTA Section */}
-          <div className="py-16 px-6">
-            <div className="max-w-6xl mx-auto">
-              <div className="bg-black p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-                <div className="text-center space-y-6">
-                  <h4 className="text-xl font-bold text-white">
-                    Ready to launch tokens based on real-world signals?
-                  </h4>
-                  <p className="text-sm text-gray-300 leading-relaxed">
-                    Connect your wallet and start monitoring probability markets. When confidence thresholds are crossed, tokens launch automatically via Bags API.
-                  </p>
-                  <button className="bg-[#20D55A] text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 transition-colors">
-                    Get Started
-                  </button>
-                </div>
+              <div className="border-t border-black/20 pt-8 text-center">
+                <p className="text-lg text-black mb-2">
+                  Direct token purchases from the platform
+                </p>
+                <p className="text-black font-semibold text-sm">
+                  Coming Soon
+                </p>
               </div>
             </div>
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }

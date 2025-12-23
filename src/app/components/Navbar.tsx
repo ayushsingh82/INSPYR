@@ -13,9 +13,7 @@ export default function Navbar() {
         
         {/* Center - Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">How It Works</Link>
           <Link href="/tokens" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Tokens</Link>
-          <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">About</Link>
         </nav>
         
         {/* Right - Sign Up Button */}
