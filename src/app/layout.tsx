@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "INSPYR - The Future of Inspiration",
-  description: "The first Web3 inspiration platform that pays you with $INSP tokens for every inspirational play, quote, or tip.",
+  title: "INSPYR - Confidence-Triggered Token Launch",
+  description: "When confidence crosses a threshold, a token is born. Signal-based minting via Bags API using Kalshi probability markets.",
 };
 
 export default function RootLayout({
