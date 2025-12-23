@@ -50,7 +50,6 @@ export default function Ticker() {
               {token.change >= 0 ? '+' : ''}
               {token.change.toFixed(2)}%
             </span>
-            <span className="text-gray-500 text-xs">Trending token</span>
           </div>
         ))}
       </div>

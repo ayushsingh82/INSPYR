@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Ticker from './components/Ticker';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -46,9 +47,9 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="px-6 py-3 bg-black text-white font-semibold rounded-lg transition-colors hover:bg-gray-800">
+            <Link href="/tokens" className="px-6 py-3 bg-black text-white font-semibold rounded-lg transition-colors hover:bg-gray-800">
               View Active Tokens
-            </button>
+            </Link>
             <button className="px-6 py-3 border border-gray-300 bg-[#20D55A] text-gray-900 font-semibold rounded-lg transition-colors hover:bg-green-400">
               Monitor Markets
             </button>
@@ -87,59 +88,60 @@ export default function Home() {
             </div>
           </div>
 
-          {/* How It Works Section */}
-          <div className="bg-[#20D55A] py-16 px-6 -mx-6 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h3 className="text-2xl sm:text-3xl font-bold text-black mb-4">
-                  How It Works
-                </h3>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black mb-12">
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto">
-                    <span className="text-white font-bold text-2xl">1</span>
-                  </div>
-                  <h4 className="text-xl font-semibold">Monitor Kalshi</h4>
-                  <p className="text-sm leading-relaxed">
-                    Continuously track probability markets on Kalshi for various events and predictions.
-                  </p>
-                </div>
-                
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto">
-                    <span className="text-white font-bold text-2xl">2</span>
-                  </div>
-                  <h4 className="text-xl font-semibold">Threshold Detection</h4>
-                  <p className="text-sm leading-relaxed">
-                    When confidence crosses a predefined threshold (e.g., 70%), the system triggers token creation.
-                  </p>
-                </div>
-                
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto">
-                    <span className="text-white font-bold text-2xl">3</span>
-                  </div>
-                  <h4 className="text-xl font-semibold">Auto-Mint via Bags</h4>
-                  <p className="text-sm leading-relaxed">
-                    Tokens are automatically minted using the Bags API, creating a seamless launch process.
-                  </p>
-                </div>
-              </div>
-
-              <div className="border-t border-black/20 pt-8 text-center">
-                <p className="text-lg text-black mb-2">
-                  Direct token purchases from the platform
-                </p>
-                <p className="text-black font-semibold text-sm">
-                  Coming Soon
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
+
+      {/* How It Works Section */}
+      <div className="bg-[#20D55A] py-16 px-6 w-full">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-black mb-4">
+              How It Works
+            </h3>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black mb-12">
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto">
+                <span className="text-white font-bold text-2xl">1</span>
+              </div>
+              <h4 className="text-xl font-semibold">Monitor Kalshi</h4>
+              <p className="text-sm leading-relaxed">
+                Continuously track probability markets on Kalshi for various events and predictions.
+              </p>
+            </div>
+            
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto">
+                <span className="text-white font-bold text-2xl">2</span>
+              </div>
+              <h4 className="text-xl font-semibold">Threshold Detection</h4>
+              <p className="text-sm leading-relaxed">
+                When confidence crosses a predefined threshold (e.g., 70%), the system triggers token creation.
+              </p>
+            </div>
+            
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto">
+                <span className="text-white font-bold text-2xl">3</span>
+              </div>
+              <h4 className="text-xl font-semibold">Auto-Mint via Bags</h4>
+              <p className="text-sm leading-relaxed">
+                Tokens are automatically minted using the Bags API, creating a seamless launch process.
+              </p>
+            </div>
+          </div>
+
+          <div className="border-t border-black/20 pt-8 text-center">
+            <p className="text-lg text-black mb-2">
+              Direct token purchases from the platform
+            </p>
+            <p className="text-black font-semibold text-sm">
+              Coming Soon
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

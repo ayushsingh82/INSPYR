@@ -50,7 +50,8 @@ const holders: Holder[] = [
   },
 ];
 
-export default function TokenDetailPage({ params }: { params: { slug: string } }) {
+export default async function TokenDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  await params; // Await params for Next.js 15 compatibility
   // In a real app, fetch token data based on slug/address
   const tokenData = {
     icon: '🐱',
@@ -91,12 +92,8 @@ export default function TokenDetailPage({ params }: { params: { slug: string } }
               <div>
                 <h1 className="text-4xl font-bold text-gray-900 mb-2">{tokenData.symbol}</h1>
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 text-sm font-medium bg-green-100 text-green-800 rounded-full">
-                    {tokenData.status}
-                  </span>
                   <span className="text-lg text-gray-700">{tokenData.description}</span>
                 </div>
-                <p className="text-gray-600 mt-2">{tokenData.tagline}</p>
               </div>
             </div>
           </div>
@@ -106,61 +103,58 @@ export default function TokenDetailPage({ params }: { params: { slug: string } }
             <div className="lg:col-span-2 space-y-6">
               {/* Stats Boxes */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                  <div className="text-sm text-gray-600 mb-2 font-semibold">MCAP</div>
-                  <div className="text-2xl font-bold text-gray-900">{tokenData.marketCap}</div>
+                <div className="bg-black p-6 rounded-lg border border-gray-200">
+                  <div className="text-sm text-gray-400 mb-2 font-semibold">MCAP</div>
+                  <div className="text-2xl font-bold text-white">{tokenData.marketCap}</div>
                 </div>
-                <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                  <div className="text-sm text-gray-600 mb-2 font-semibold">24H VOL</div>
-                  <div className="text-2xl font-bold text-gray-900">{tokenData.volume24h}</div>
+                <div className="bg-black p-6 rounded-lg border border-gray-200">
+                  <div className="text-sm text-gray-400 mb-2 font-semibold">24H VOL</div>
+                  <div className="text-2xl font-bold text-white">{tokenData.volume24h}</div>
                 </div>
-                <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                  <div className="text-sm text-gray-600 mb-2 font-semibold">PRICE</div>
-                  <div className="text-2xl font-bold text-gray-900">{tokenData.price}</div>
+                <div className="bg-black p-6 rounded-lg border border-gray-200">
+                  <div className="text-sm text-gray-400 mb-2 font-semibold">PRICE</div>
+                  <div className="text-2xl font-bold text-white">{tokenData.price}</div>
                 </div>
               </div>
 
               {/* Top 100 Holders */}
-              <div className="bg-white border border-gray-200 rounded-lg">
-                <div className="p-6 border-b border-gray-200">
-                  <h2 className="text-xl font-bold text-gray-900">Top 100 Holders</h2>
+              <div className="bg-black border border-white/10 rounded-lg overflow-hidden">
+                <div className="p-6 border-b border-white/10 bg-gray-900">
+                  <h2 className="text-xl font-bold text-white">Top 100 Holders</h2>
                 </div>
                 <div className="overflow-x-auto">
                   <table className="w-full">
-                    <thead className="bg-gray-50 border-b border-gray-200">
+                    <thead className="bg-gray-900 border-b border-white/10">
                       <tr>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                        <th className="px-6 py-4 text-left text-xs font-semibold text-white uppercase tracking-wider border-r border-white/10">
                           Rank
                         </th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                        <th className="px-6 py-4 text-left text-xs font-semibold text-white uppercase tracking-wider border-r border-white/10">
                           Address
                         </th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                          Percentage
-                        </th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                          Balance
+                        <th className="px-6 py-4 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                          Holdings
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
+                    <tbody className="bg-black divide-y divide-white/10">
                       {holders.map((holder) => (
-                        <tr key={holder.rank} className="hover:bg-gray-50 transition-colors">
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
+                        <tr key={holder.rank} className="hover:bg-gray-900/50 transition-colors border-b border-white/10">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-white font-medium border-r border-white/10">
                             {holder.rank}
                           </td>
-                          <td className="px-6 py-4">
+                          <td className="px-6 py-4 border-r border-white/10">
                             <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-xs">
+                              <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 text-xs">
                                 {holder.avatar}
                               </div>
                               <div>
                                 {holder.name && (
-                                  <div className="text-sm font-semibold text-gray-900">{holder.name}</div>
+                                  <div className="text-sm font-semibold text-white">{holder.name}</div>
                                 )}
                                 <div className="flex items-center gap-2">
-                                  <span className="text-sm text-gray-600 font-mono">{holder.address}</span>
-                                  <button className="text-gray-400 hover:text-gray-600 transition-colors">
+                                  <span className="text-sm text-gray-300 font-mono">{holder.address}</span>
+                                  <button className="text-gray-400 hover:text-gray-200 transition-colors">
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                     </svg>
@@ -169,11 +163,11 @@ export default function TokenDetailPage({ params }: { params: { slug: string } }
                               </div>
                             </div>
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold">
-                            {holder.percentage}%
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold">
-                            {holder.balance}
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="flex flex-col">
+                              <span className="text-sm text-white font-semibold">{holder.percentage}%</span>
+                              <span className="text-xs text-gray-400">{holder.balance} tokens</span>
+                            </div>
                           </td>
                         </tr>
                       ))}
@@ -184,21 +178,20 @@ export default function TokenDetailPage({ params }: { params: { slug: string } }
             </div>
 
             {/* Right Column - Buy Options */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Buy on DEX</h3>
+            <div className="space-y-3">
               {exchanges.map((exchange) => (
                 <Link
                   key={exchange.name}
                   href="#"
-                  className="block bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-[#20D55A] hover:bg-gray-100 transition-all"
+                  className="block bg-black p-4 rounded-lg border border-white/10 hover:border-white  transition-all"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-2xl border border-gray-200">
+                    <div className="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-base border border-white/10">
                       {exchange.logo}
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-gray-900">{exchange.name}</div>
-                      <div className="text-sm text-gray-600">Buy on {exchange.name}</div>
+                      <div className="text-base font-bold text-white">{exchange.name}</div>
+                      <div className="text-sm text-gray-400">Buy on {exchange.name}</div>
                     </div>
                   </div>
                 </Link>

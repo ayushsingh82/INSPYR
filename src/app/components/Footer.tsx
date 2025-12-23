@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <h2 className="text-xl font-bold text-white" style={{ color: '#000000', backgroundColor: '#20D55A', borderRadius: '10px', padding: '4px 8px' }}>
+              <h2 className="text-xl font-bold" style={{ color: '#000000', backgroundColor: '#20D55A', borderRadius: '10px', padding: '4px 8px' }}>
                 INSPYR
               </h2>
             </div>
