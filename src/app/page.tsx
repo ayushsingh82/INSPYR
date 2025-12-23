@@ -1,4 +1,5 @@
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 import Ticker from './components/Ticker';
 
 export default function Home() {
@@ -7,29 +8,8 @@ export default function Home() {
       {/* Ticker */}
       <Ticker />
 
-      {/* Header/Navbar */}
-      <header className="w-full py-4 px-6 border-b border-gray-200 bg-white">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          {/* Left - Logo */}
-          <div className="flex items-center">
-            <h1 className="text-2xl font-bold" style={{ color: '#000000', backgroundColor: '#20D55A', borderRadius: '10px', padding: '3px' }}>INSPYR</h1>
-          </div>
-          
-          {/* Center - Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">How It Works</a>
-            <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Tokens</a>
-            <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">About</a>
-          </nav>
-          
-          {/* Right - Sign Up Button */}
-          <div className="flex items-center">
-            <button className="px-4 py-2 bg-[#20D55A] text-white text-sm font-semibold rounded-lg transition-colors">
-              Connect Wallet
-            </button>
-          </div>
-        </div>
-      </header>
+      {/* Navbar */}
+      <Navbar />
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-12 text-center bg-white mt-8">
