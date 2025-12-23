@@ -18,7 +18,7 @@ export default function Navbar() {
         
         {/* Right - Sign Up Button */}
         <div className="flex items-center">
-          <button className="px-4 py-2 bg-[#20D55A] text-white text-sm font-semibold rounded-lg transition-colors">
+          <button className="px-4 py-2 bg-[#20D55A] text-black text-sm font-semibold rounded-lg transition-colors">
             Connect Wallet
           </button>
         </div>

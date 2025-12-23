@@ -98,104 +98,106 @@ export default async function TokenDetailPage({ params }: { params: Promise<{ sl
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Stats */}
-            <div className="lg:col-span-2 space-y-6">
-              {/* Stats Boxes */}
+          {/* Unified Stats, Holders, and Buy Section */}
+          <div className="bg-black border border-white/10 rounded-lg overflow-hidden">
+            {/* Stats Section */}
+            <div className="p-6 border-b border-white/10 bg-gray-900">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-black p-6 rounded-lg border border-gray-200">
-                  <div className="text-sm text-gray-400 mb-2 font-semibold">MCAP</div>
-                  <div className="text-2xl font-bold text-white">{tokenData.marketCap}</div>
+                <div className="bg-black/50 p-4 rounded-lg border border-white/10 hover:border-white">
+                  <div className="text-xs text-gray-400 mb-1 font-semibold uppercase">MCAP</div>
+                  <div className="text-xl font-bold text-white">{tokenData.marketCap}</div>
                 </div>
-                <div className="bg-black p-6 rounded-lg border border-gray-200">
-                  <div className="text-sm text-gray-400 mb-2 font-semibold">24H VOL</div>
-                  <div className="text-2xl font-bold text-white">{tokenData.volume24h}</div>
+                <div className="bg-black/50 p-4 rounded-lg border border-white/10">
+                  <div className="text-xs text-gray-400 mb-1 font-semibold uppercase">24H VOL</div>
+                  <div className="text-xl font-bold text-white">{tokenData.volume24h}</div>
                 </div>
-                <div className="bg-black p-6 rounded-lg border border-gray-200">
-                  <div className="text-sm text-gray-400 mb-2 font-semibold">PRICE</div>
-                  <div className="text-2xl font-bold text-white">{tokenData.price}</div>
-                </div>
-              </div>
-
-              {/* Top 100 Holders */}
-              <div className="bg-black border border-white/10 rounded-lg overflow-hidden">
-                <div className="p-6 border-b border-white/10 bg-gray-900">
-                  <h2 className="text-xl font-bold text-white">Top 100 Holders</h2>
-                </div>
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead className="bg-gray-900 border-b border-white/10">
-                      <tr>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-white uppercase tracking-wider border-r border-white/10">
-                          Rank
-                        </th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-white uppercase tracking-wider border-r border-white/10">
-                          Address
-                        </th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-white uppercase tracking-wider">
-                          Holdings
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-black divide-y divide-white/10">
-                      {holders.map((holder) => (
-                        <tr key={holder.rank} className="hover:bg-gray-900/50 transition-colors border-b border-white/10">
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-white font-medium border-r border-white/10">
-                            {holder.rank}
-                          </td>
-                          <td className="px-6 py-4 border-r border-white/10">
-                            <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 text-xs">
-                                {holder.avatar}
-                              </div>
-                              <div>
-                                {holder.name && (
-                                  <div className="text-sm font-semibold text-white">{holder.name}</div>
-                                )}
-                                <div className="flex items-center gap-2">
-                                  <span className="text-sm text-gray-300 font-mono">{holder.address}</span>
-                                  <button className="text-gray-400 hover:text-gray-200 transition-colors">
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                                    </svg>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-col">
-                              <span className="text-sm text-white font-semibold">{holder.percentage}%</span>
-                              <span className="text-xs text-gray-400">{holder.balance} tokens</span>
-                            </div>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                <div className="bg-black/50 p-4 rounded-lg border border-white/10">
+                  <div className="text-xs text-gray-400 mb-1 font-semibold uppercase">PRICE</div>
+                  <div className="text-xl font-bold text-white">{tokenData.price}</div>
                 </div>
               </div>
             </div>
 
-            {/* Right Column - Buy Options */}
-            <div className="space-y-3">
-              {exchanges.map((exchange) => (
-                <Link
-                  key={exchange.name}
-                  href="#"
-                  className="block bg-black p-4 rounded-lg border border-white/10 hover:border-white  transition-all"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-base border border-white/10">
-                      {exchange.logo}
+            {/* Top 100 Holders Section */}
+            <div className="border-b border-white/10">
+              <div className="p-6 border-b border-white/10 bg-gray-900">
+                <h2 className="text-xl font-bold text-white">Top 100 Holders</h2>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-900 border-b border-white/10">
+                    <tr>
+                      <th className="px-6 py-4 text-left text-xs font-semibold text-white uppercase tracking-wider border-r border-white/10">
+                        Rank
+                      </th>
+                      <th className="px-6 py-4 text-left text-xs font-semibold text-white uppercase tracking-wider border-r border-white/10">
+                        Address
+                      </th>
+                      <th className="px-6 py-4 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                        Holdings
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-black divide-y divide-white/10">
+                    {holders.map((holder) => (
+                      <tr key={holder.rank} className="hover:bg-gray-900/50 transition-colors border-b border-white/10">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-white font-medium border-r border-white/10">
+                          {holder.rank}
+                        </td>
+                        <td className="px-6 py-4 border-r border-white/10">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 text-xs">
+                              {holder.avatar}
+                            </div>
+                            <div>
+                              {holder.name && (
+                                <div className="text-sm font-semibold text-white">{holder.name}</div>
+                              )}
+                              <div className="flex items-center gap-2">
+                                <span className="text-sm text-gray-300 font-mono">{holder.address}</span>
+                                <button className="text-gray-400 hover:text-gray-200 transition-colors">
+                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="flex flex-col">
+                            <span className="text-sm text-white font-semibold">{holder.percentage}%</span>
+                            <span className="text-xs text-gray-400">{holder.balance} tokens</span>
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Buy Options Section */}
+            <div className="p-6 bg-gray-900">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {exchanges.map((exchange) => (
+                  <Link
+                    key={exchange.name}
+                    href="#"
+                    className="block bg-black/50 p-4 rounded-lg border border-white/10 hover:border-white hover:bg-black transition-all"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-base border border-white/10">
+                        {exchange.logo}
+                      </div>
+                      <div>
+                        <div className="text-base font-bold text-white">{exchange.name}</div>
+                        <div className="text-sm text-gray-400">Buy on {exchange.name}</div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="text-base font-bold text-white">{exchange.name}</div>
-                      <div className="text-sm text-gray-400">Buy on {exchange.name}</div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
