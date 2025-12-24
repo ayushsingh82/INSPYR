@@ -4,6 +4,80 @@ import Navbar from '../components/Navbar';
 import Ticker from '../components/Ticker';
 import { useRouter } from 'next/navigation';
 
+// Constant for KalshiBags prefix
+const KB_PREFIX = 'KB';
+
+// Helper function to generate token name from event
+function generateTokenName(event: string): string {
+  // Remove threshold part (e.g., " > 70%")
+  const eventText = event.split(' > ')[0].trim();
+  
+  // Extract key words and create abbreviation
+  const words = eventText.toLowerCase().split(' ');
+  let abbreviation = '';
+  
+  // Special cases for common patterns
+  if (eventText.includes('recession')) {
+    const yearMatch = eventText.match(/\d{4}/);
+    const year = yearMatch ? yearMatch[0].slice(-2) : '';
+    return `${KB_PREFIX}RECESSION${year}`;
+  }
+  if (eventText.includes('Bitcoin') || eventText.includes('bitcoin')) {
+    const priceMatch = eventText.match(/\$?(\d+)K?/i);
+    const price = priceMatch ? priceMatch[1] : '';
+    return `${KB_PREFIX}BTC${price}K`;
+  }
+  if (eventText.includes('Ethereum') || eventText.includes('ethereum')) {
+    return `${KB_PREFIX}ETHUPGRADE`;
+  }
+  if (eventText.includes('SpaceX') || eventText.includes('spacex')) {
+    return `${KB_PREFIX}SPACEX`;
+  }
+  if (eventText.includes('Lunar') || eventText.includes('lunar')) {
+    return `${KB_PREFIX}LUNAR`;
+  }
+  if (eventText.includes('Electric vehicle') || eventText.includes('electric vehicle')) {
+    return `${KB_PREFIX}EVADOPT`;
+  }
+  if (eventText.includes('AI art') || eventText.includes('ai art')) {
+    return `${KB_PREFIX}AIART`;
+  }
+  if (eventText.includes('Olympics') || eventText.includes('olympics')) {
+    return `${KB_PREFIX}OLYMPICS`;
+  }
+  if (eventText.includes('Climate') || eventText.includes('climate')) {
+    return `${KB_PREFIX}CLIMATE`;
+  }
+  if (eventText.includes('Entertainment') || eventText.includes('entertainment')) {
+    return `${KB_PREFIX}ENTERTAIN`;
+  }
+  if (eventText.includes('Aviation') || eventText.includes('aviation')) {
+    return `${KB_PREFIX}AVIATION`;
+  }
+  if (eventText.includes('Streaming') || eventText.includes('streaming')) {
+    return `${KB_PREFIX}STREAMING`;
+  }
+  if (eventText.includes('NFT') || eventText.includes('nft')) {
+    return `${KB_PREFIX}NFTREBOUND`;
+  }
+  if (eventText.includes('Meme coin') || eventText.includes('meme coin')) {
+    return `${KB_PREFIX}MEMESURGE`;
+  }
+  if (eventText.includes('Gold') || eventText.includes('gold')) {
+    return `${KB_PREFIX}GOLDSURGE`;
+  }
+  
+  // Default: take first letters of key words
+  const keyWords = words.filter(w => w.length > 3 || /^\d/.test(w));
+  if (keyWords.length > 0) {
+    abbreviation = keyWords.map(w => w.charAt(0).toUpperCase() + w.slice(1, 3)).join('').toUpperCase();
+  } else {
+    abbreviation = words.slice(0, 3).map(w => w.charAt(0).toUpperCase()).join('');
+  }
+  
+  return `${KB_PREFIX}${abbreviation}`;
+}
+
 interface Token {
   id: number;
   icon: string;
@@ -27,16 +101,16 @@ interface Token {
 const tokens: Token[] = [
   {
     id: 1,
-    icon: '🐱',
-    name: 'NYAN',
+    icon: '📉',
+    name: generateTokenName('US recession in 2025 > 70%'),
     status: 'Claimed',
-    description: 'Nyan Cat',
+    description: 'US recession in 2025',
     change: 167.88,
     marketCap: '$38,903.06',
     creator: {
-      name: 'PRguitarman',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@prguitarman',
+      twitter: '@kalshibags',
       twitterFollowers: '$9.89K',
     },
     volume24h: '$9.65K',
@@ -47,15 +121,15 @@ const tokens: Token[] = [
   {
     id: 2,
     icon: '🚀',
-    name: 'DOMINO',
+    name: generateTokenName('Bitcoin reaches $150K > 75%'),
     status: 'Claimed',
-    description: 'Domino Effect',
+    description: 'Bitcoin reaches $150K',
     change: 85.93,
     marketCap: '$125,420.50',
     creator: {
-      name: 'CryptoTrader',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@cryptotrader',
+      twitter: '@kalshibags',
       twitterFollowers: '$15.2K',
     },
     volume24h: '$22.3K',
@@ -66,15 +140,15 @@ const tokens: Token[] = [
   {
     id: 3,
     icon: '💰',
-    name: 'RETARD',
+    name: generateTokenName('Ethereum upgrade success > 80%'),
     status: 'Claimed',
-    description: 'Retard Strength',
+    description: 'Ethereum upgrade success',
     change: 250.81,
     marketCap: '$89,234.12',
     creator: {
-      name: 'DeFiMaster',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@defimaster',
+      twitter: '@kalshibags',
       twitterFollowers: '$12.5K',
     },
     volume24h: '$18.7K',
@@ -85,15 +159,15 @@ const tokens: Token[] = [
   {
     id: 4,
     icon: '🎯',
-    name: 'PEPE',
+    name: generateTokenName('Meme coin surge > 65%'),
     status: 'Claimed',
-    description: 'Pepe the Frog',
+    description: 'Meme coin surge',
     change: 22.32,
     marketCap: '$234,567.89',
     creator: {
-      name: 'Memelord',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@memelord',
+      twitter: '@kalshibags',
       twitterFollowers: '$45.8K',
     },
     volume24h: '$56.2K',
@@ -104,15 +178,15 @@ const tokens: Token[] = [
   {
     id: 5,
     icon: '🔥',
-    name: 'FLAME',
+    name: generateTokenName('NFT market rebound > 68%'),
     status: 'Claimed',
-    description: 'Flame Token',
+    description: 'NFT market rebound',
     change: 45.67,
     marketCap: '$67,890.12',
     creator: {
-      name: 'FireMaster',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@firemaster',
+      twitter: '@kalshibags',
       twitterFollowers: '$8.3K',
     },
     volume24h: '$12.4K',
@@ -123,15 +197,15 @@ const tokens: Token[] = [
   {
     id: 6,
     icon: '⭐',
-    name: 'STAR',
+    name: generateTokenName('SpaceX mission success > 72%'),
     status: 'Claimed',
-    description: 'Star Power',
+    description: 'SpaceX mission success',
     change: 78.90,
     marketCap: '$156,789.45',
     creator: {
-      name: 'StarGazer',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@stargazer',
+      twitter: '@kalshibags',
       twitterFollowers: '$22.1K',
     },
     volume24h: '$34.5K',
@@ -142,15 +216,15 @@ const tokens: Token[] = [
   {
     id: 7,
     icon: '💎',
-    name: 'DIAMOND',
+    name: generateTokenName('Gold price surge > 73%'),
     status: 'Claimed',
-    description: 'Diamond Hands',
+    description: 'Gold price surge',
     change: -12.34,
     marketCap: '$98,765.43',
     creator: {
-      name: 'DiamondHands',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@diamondhands',
+      twitter: '@kalshibags',
       twitterFollowers: '$18.7K',
     },
     volume24h: '$21.3K',
@@ -161,15 +235,15 @@ const tokens: Token[] = [
   {
     id: 8,
     icon: '🌙',
-    name: 'MOON',
+    name: generateTokenName('Lunar landing > 76%'),
     status: 'Claimed',
-    description: 'To The Moon',
+    description: 'Lunar landing',
     change: 123.45,
     marketCap: '$234,567.89',
     creator: {
-      name: 'MoonBoy',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@moonboy',
+      twitter: '@kalshibags',
       twitterFollowers: '$31.2K',
     },
     volume24h: '$45.6K',
@@ -180,15 +254,15 @@ const tokens: Token[] = [
   {
     id: 9,
     icon: '⚡',
-    name: 'BOLT',
+    name: generateTokenName('Electric vehicle adoption > 69%'),
     status: 'Claimed',
-    description: 'Lightning Bolt',
+    description: 'Electric vehicle adoption',
     change: 56.78,
     marketCap: '$87,654.32',
     creator: {
-      name: 'Thunder',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@thunder',
+      twitter: '@kalshibags',
       twitterFollowers: '$14.5K',
     },
     volume24h: '$19.8K',
@@ -199,15 +273,15 @@ const tokens: Token[] = [
   {
     id: 10,
     icon: '🎨',
-    name: 'ART',
+    name: generateTokenName('AI art trend > 71%'),
     status: 'Claimed',
-    description: 'Digital Art',
+    description: 'AI art trend',
     change: 34.56,
     marketCap: '$145,678.90',
     creator: {
-      name: 'Artist',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@artist',
+      twitter: '@kalshibags',
       twitterFollowers: '$27.8K',
     },
     volume24h: '$38.2K',
@@ -218,15 +292,15 @@ const tokens: Token[] = [
   {
     id: 11,
     icon: '🏆',
-    name: 'TROPHY',
+    name: generateTokenName('Olympics viewership > 74%'),
     status: 'Claimed',
-    description: 'Champions Trophy',
+    description: 'Olympics viewership',
     change: 89.12,
     marketCap: '$198,765.43',
     creator: {
-      name: 'Champion',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@champion',
+      twitter: '@kalshibags',
       twitterFollowers: '$36.4K',
     },
     volume24h: '$52.7K',
@@ -237,15 +311,15 @@ const tokens: Token[] = [
   {
     id: 12,
     icon: '🌊',
-    name: 'WAVE',
+    name: generateTokenName('Climate change awareness > 70%'),
     status: 'Claimed',
-    description: 'Ocean Wave',
+    description: 'Climate change awareness',
     change: -5.67,
     marketCap: '$76,543.21',
     creator: {
-      name: 'Surfer',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@surfer',
+      twitter: '@kalshibags',
       twitterFollowers: '$11.9K',
     },
     volume24h: '$15.6K',
@@ -256,15 +330,15 @@ const tokens: Token[] = [
   {
     id: 13,
     icon: '🎪',
-    name: 'CIRCUS',
+    name: generateTokenName('Entertainment industry growth > 75%'),
     status: 'Claimed',
-    description: 'Circus Fun',
+    description: 'Entertainment industry growth',
     change: 67.89,
     marketCap: '$112,345.67',
     creator: {
-      name: 'Jester',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@jester',
+      twitter: '@kalshibags',
       twitterFollowers: '$19.3K',
     },
     volume24h: '$28.4K',
@@ -275,15 +349,15 @@ const tokens: Token[] = [
   {
     id: 14,
     icon: '🚁',
-    name: 'HELI',
+    name: generateTokenName('Aviation recovery > 77%'),
     status: 'Claimed',
-    description: 'Helicopter',
+    description: 'Aviation recovery',
     change: 91.23,
     marketCap: '$165,432.10',
     creator: {
-      name: 'Pilot',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@pilot',
+      twitter: '@kalshibags',
       twitterFollowers: '$24.6K',
     },
     volume24h: '$41.9K',
@@ -294,15 +368,15 @@ const tokens: Token[] = [
   {
     id: 15,
     icon: '🎭',
-    name: 'DRAMA',
+    name: generateTokenName('Streaming service growth > 72%'),
     status: 'Claimed',
-    description: 'Drama Token',
+    description: 'Streaming service growth',
     change: -8.90,
     marketCap: '$89,012.34',
     creator: {
-      name: 'Actor',
+      name: 'KalshiBags',
       avatar: '👤',
-      twitter: '@actor',
+      twitter: '@kalshibags',
       twitterFollowers: '$16.8K',
     },
     volume24h: '$22.1K',

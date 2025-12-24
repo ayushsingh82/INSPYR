@@ -61,28 +61,6 @@ Continuous tracking of probability markets ensures immediate token creation when
 - **Runtime**: React 19
 - **Deployment**: Vercel (configured)
 
-## 📁 Project Structure
-
-```
-KalshiBags/
-├── src/
-│   ├── kalshi/                  # Kalshi API integration
-│   ├── bags/                    # Bags API integration
-│   └── app/
-│       ├── components/
-│       │   ├── Navbar.tsx      # Navigation bar
-│       │   ├── Ticker.tsx       # Real-time token price ticker
-│       │   └── Footer.tsx      # Footer component
-│       ├── page.tsx             # Home page with hero and features
-│       ├── tokens/
-│       │   └── page.tsx        # Tokens listing page
-│       └── token/
-│           └── [slug]/
-│               └── page.tsx    # Individual token detail page
-├── public/                      # Static assets
-└── package.json                 # Dependencies
-```
-
 ## 🚀 Getting Started
 
 ### Prerequisites
