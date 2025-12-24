@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <header className="w-full py-4 px-6 border-b border-gray-200 bg-white">
+    <header className="w-full py-4 px-6 border-b border-white/20" style={{ backgroundColor: '#080808' }}>
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Left - Logo */}
         <div className="flex items-center">
@@ -13,7 +13,7 @@ export default function Navbar() {
         
         {/* Center - Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/tokens" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Tokens</Link>
+          <Link href="/tokens" className="text-sm text-white transition-colors hover:text-white/80">Tokens</Link>
         </nav>
         
         {/* Right - Sign Up Button */}

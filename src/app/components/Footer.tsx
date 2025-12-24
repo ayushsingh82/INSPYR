@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-black text-gray-300 border-t border-gray-800">
+    <footer className="w-full text-gray-300 border-t border-white/20" style={{ backgroundColor: '#080808' }}>
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand Section */}
@@ -12,13 +12,13 @@ export default function Footer() {
                 KalshiBags
               </h2>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-white/40 leading-relaxed">
               Confidence-triggered token launches. When market signals cross thresholds, tokens are born via Bags API.
             </p>
             <div className="flex items-center gap-4 pt-2">
               <Link 
                 href="#" 
-                className="text-gray-400 hover:text-[#20D55A] transition-colors"
+                className="text-white/40 hover:text-[#20D55A] transition-colors"
                 aria-label="X (Twitter)"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -60,27 +60,27 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Product</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   How It Works
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Token Launch
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Kalshi Integration
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Bags API
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Trending Tokens
                 </Link>
               </li>
@@ -92,22 +92,22 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Contact
                 </Link>
               </li>
@@ -119,27 +119,27 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Documentation
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   API Reference
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Help Center
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-gray-400 hover:text-[#20D55A] transition-colors">
+                <Link href="#" className="text-sm text-white/40 hover:text-[#20D55A] transition-colors">
                   Terms of Service
                 </Link>
               </li>
@@ -148,12 +148,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8 mt-8">
+        <div className="border-t border-white/20 pt-8 mt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-white/40">
               © {new Date().getFullYear()} KalshiBags. All rights reserved.
             </p>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-white/40">
               Built with confidence. Powered by <span className="text-[#20D55A]">Kalshi</span> & <span className="text-[#20D55A]">Bags</span>.
             </p>
           </div>

@@ -394,7 +394,7 @@ export default function TokensPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#000000' }}>
       {/* Ticker */}
       <Ticker />
 
@@ -402,17 +402,17 @@ export default function TokensPage() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex-1 px-6 py-12 bg-white">
+      <main className="flex-1 px-6 py-12" style={{ backgroundColor: '#000000' }}>
         <div className="max-w-7xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Tokens</h1>
-            <p className="text-gray-600">All tokens minted via confidence-triggered launches</p>
+            <h1 className="text-3xl font-bold text-white mb-2">Tokens</h1>
+            <p className="text-white/40">All tokens minted via confidence-triggered launches</p>
           </div>
 
           {/* Table */}
-          <div className="overflow-x-auto bg-black border border-white/10 rounded-lg">
+          <div className="overflow-x-auto border border-white/10 rounded-lg" style={{ backgroundColor: '#111111' }}>
             <table className="w-full">
-              <thead className="bg-gray-900 border-b border-white/10">
+              <thead className="border-b border-white/10" style={{ backgroundColor: '#111111' }}>
                 <tr>
                   <th className="px-6 py-5 text-left text-sm font-semibold text-white uppercase tracking-wider border-r border-white/10">
                     #
@@ -440,28 +440,29 @@ export default function TokensPage() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="bg-black divide-y divide-white/10">
+              <tbody className="divide-y divide-white/10" style={{ backgroundColor: '#111111' }}>
                 {tokens.map((token) => (
                   <tr 
                     key={token.id} 
-                    className="hover:bg-gray-900/50 transition-colors border-b border-white/10 cursor-pointer"
+                    className="hover:opacity-80 transition-opacity border-b border-white/10 cursor-pointer"
+                    style={{ backgroundColor: '#111111' }}
                     onClick={() => handleTokenClick(token.name)}
                   >
-                    <td className="px-6 py-5 whitespace-nowrap text-base text-white font-medium border-r border-white/10">
+                    <td className="px-6 py-5 whitespace-nowrap text-base text-white font-medium border-r border-white/10" style={{ backgroundColor: '#111111' }}>
                       {token.id}
                     </td>
-                    <td className="px-6 py-5 border-r border-white/10">
+                    <td className="px-6 py-5 border-r border-white/10" style={{ backgroundColor: '#111111' }}>
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#20D55A] to-green-600 flex items-center justify-center text-white text-xl font-bold">
                           {token.icon}
                         </div>
                         <div>
                           <div className="text-base font-bold text-white">{token.name}</div>
-                          <div className="text-sm text-gray-400">{token.description}</div>
+                          <div className="text-sm text-white/40">{token.description}</div>
                         </div>
                       </div>
                     </td>
-                    <td className="px-6 py-5 whitespace-nowrap border-r border-white/10">
+                    <td className="px-6 py-5 whitespace-nowrap border-r border-white/10" style={{ backgroundColor: '#111111' }}>
                       <span
                         className={`text-base font-bold ${
                           token.change >= 0 ? 'text-green-400' : 'text-red-400'
@@ -471,19 +472,19 @@ export default function TokensPage() {
                         {token.change.toFixed(2)}%
                       </span>
                     </td>
-                    <td className="px-6 py-5 whitespace-nowrap text-base text-white font-semibold border-r border-white/10">
+                    <td className="px-6 py-5 whitespace-nowrap text-base text-white font-semibold border-r border-white/10" style={{ backgroundColor: '#111111' }}>
                       {token.marketCap}
                     </td>
-                    <td className="px-6 py-5 whitespace-nowrap text-base text-white font-medium border-r border-white/10">
+                    <td className="px-6 py-5 whitespace-nowrap text-base text-white font-medium border-r border-white/10" style={{ backgroundColor: '#111111' }}>
                       {token.volume24h}
                     </td>
-                    <td className="px-6 py-5 whitespace-nowrap text-base text-white font-mono font-medium border-r border-white/10">
+                    <td className="px-6 py-5 whitespace-nowrap text-base text-white font-mono font-medium border-r border-white/10" style={{ backgroundColor: '#111111' }}>
                       {token.price}
                     </td>
-                    <td className="px-6 py-5 whitespace-nowrap text-base text-white font-medium border-r border-white/10">
+                    <td className="px-6 py-5 whitespace-nowrap text-base text-white font-medium border-r border-white/10" style={{ backgroundColor: '#111111' }}>
                       {token.holders}
                     </td>
-                    <td className="px-6 py-5 bg-black">
+                    <td className="px-6 py-5" style={{ backgroundColor: '#111111' }}>
                       <span className="text-base text-white font-semibold">
                         {token.mintEvent}
                       </span>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#000000' }}>
       {/* Ticker */}
       <Ticker />
 
@@ -12,45 +12,45 @@ export default function Home() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-center px-6 py-12 text-center bg-white mt-8">
+      <main className="flex-1 flex flex-col items-center justify-center px-6 py-12 text-center mt-8" style={{ backgroundColor: '#000000' }}>
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Hero Section */}
           <div className="space-y-6">
-            <div className="inline-block px-4 py-2 border border-gray-300 rounded-full">
-              <p className="text-sm text-gray-600">
+            <div className="inline-block px-4 py-2 border border-white/20 rounded-full">
+              <p className="text-sm text-white/40">
                 When confidence crosses a threshold, a token is born.
                 <span className="text-[#000000] bg-[#20D55A] rounded-full px-2 py-1 transition-colors"> Learn more {'->'}</span>
               </p>
             </div>
-            <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
               Confidence-Triggered
-              <span className="bg-[#20D55A] border border-gray-300 rounded-full px-2 py-1 transition-colors"> Token Launch </span>
+              <span className="bg-[#20D55A] border border-white/20 rounded-full px-2 py-1 transition-colors"> Token Launch </span>
             </h2>
-            <p className="text-xl text-gray-600 font-semibold">
+            <p className="text-xl text-white/40 font-semibold">
               Signal-based minting via Bags API
             </p>
           </div>
 
           {/* Description */}
           <div className="space-y-4 max-w-3xl mx-auto">
-            <p className="text-base text-gray-700 leading-relaxed">
+            <p className="text-base text-white/40 leading-relaxed">
               Monitor Kalshi probabilities in real-time. When confidence crosses a threshold, tokens are automatically minted via Bags API.
             </p>
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mt-6 text-left">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Example:</h3>
-              <p className="text-sm text-gray-700">
+            <div className="p-6 rounded-lg border border-white/20 mt-6 text-left" style={{ backgroundColor: '#000000' }}>
+              <h3 className="text-lg font-semibold text-white mb-3">Example:</h3>
+              <p className="text-sm text-white/40">
                 When &quot;US recession in 2025&quot; probability exceeds <span className="font-bold text-[#20D55A]">70%</span>, 
-                <span className="font-bold"> $RECESSION25 </span> token is auto-minted via Bags.
+                <span className="font-bold text-white"> $RECESSION25 </span> token is auto-minted via Bags.
               </p>
             </div>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/tokens" className="px-6 py-3 bg-black text-white font-semibold rounded-lg transition-colors hover:bg-gray-800">
+            <Link href="/tokens" className="px-6 py-3 border border-white/20 text-white font-semibold rounded-lg transition-colors">
               View Active Tokens
             </Link>
-            <button className="px-6 py-3 border border-gray-300 bg-[#20D55A] text-gray-900 font-semibold rounded-lg transition-colors hover:bg-green-400">
+            <button className="px-6 py-3 bg-[#20D55A] text-gray-900 font-semibold rounded-lg transition-colors hover:bg-green-400">
               Monitor Markets
             </button>
           </div>
@@ -58,30 +58,30 @@ export default function Home() {
           {/* Features Section */}
           <div className="space-y-8 max-w-4xl mx-auto mt-24">
             <div className="text-center space-y-4">
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white">
                 Why this approach?
               </h3>
             </div>
 
             {/* Three Feature Boxes */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg border border-[#20D55A]">
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">Signal-Based Minting</h4>
-                <p className="text-sm text-gray-600">
+              <div className="p-6 rounded-lg border border-white/20" style={{ backgroundColor: '#000000' }}>
+                <h4 className="text-lg font-semibold text-white mb-3">Signal-Based Minting</h4>
+                <p className="text-sm text-white/40">
                   Tokens are created only when real-world events reach significant confidence thresholds, ensuring meaningful launches.
                 </p>
               </div>
               
-              <div className="bg-gray-50 p-6 rounded-lg border border-[#20D55A]">
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">Prevents Spam Tokens</h4>
-                <p className="text-sm text-gray-600">
+              <div className="p-6 rounded-lg border border-white/20" style={{ backgroundColor: '#000000' }}>
+                <h4 className="text-lg font-semibold text-white mb-3">Prevents Spam Tokens</h4>
+                <p className="text-sm text-white/40">
                   Automatic filtering through probability thresholds means only tokens with genuine market signals are created.
                 </p>
               </div>
               
-              <div className="bg-gray-50 p-6 rounded-lg border border-[#20D55A]">
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">Data-Driven Launches</h4>
-                <p className="text-sm text-gray-600">
+              <div className="p-6 rounded-lg border border-white/20" style={{ backgroundColor: '#000000' }}>
+                <h4 className="text-lg font-semibold text-white mb-3">Data-Driven Launches</h4>
+                <p className="text-sm text-white/40">
                   Every token launch is backed by real market data from Kalshi, creating transparent and verifiable token creation.
                 </p>
               </div>
@@ -92,51 +92,51 @@ export default function Home() {
       </main>
 
       {/* How It Works Section */}
-      <div className="bg-[#20D55A] py-16 px-6 w-full">
+      <div className="py-16 px-6 w-full" style={{ backgroundColor: '#000000' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-black mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               How It Works
             </h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto">
-                <span className="text-white font-bold text-2xl">1</span>
+              <div className="w-16 h-16 bg-[#20D55A] rounded-full flex items-center justify-center mx-auto">
+                <span className="text-black font-bold text-2xl">1</span>
               </div>
-              <h4 className="text-xl font-semibold">Monitor Kalshi</h4>
-              <p className="text-sm leading-relaxed">
+              <h4 className="text-xl font-semibold text-white">Monitor Kalshi</h4>
+              <p className="text-sm leading-relaxed text-white/40">
                 Continuously track probability markets on Kalshi for various events and predictions.
               </p>
             </div>
             
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto">
-                <span className="text-white font-bold text-2xl">2</span>
+              <div className="w-16 h-16 bg-[#20D55A] rounded-full flex items-center justify-center mx-auto">
+                <span className="text-black font-bold text-2xl">2</span>
               </div>
-              <h4 className="text-xl font-semibold">Threshold Detection</h4>
-              <p className="text-sm leading-relaxed">
+              <h4 className="text-xl font-semibold text-white">Threshold Detection</h4>
+              <p className="text-sm leading-relaxed text-white/40">
                 When confidence crosses a predefined threshold (e.g., 70%), the system triggers token creation.
               </p>
             </div>
             
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto">
-                <span className="text-white font-bold text-2xl">3</span>
+              <div className="w-16 h-16 bg-[#20D55A] rounded-full flex items-center justify-center mx-auto">
+                <span className="text-black font-bold text-2xl">3</span>
               </div>
-              <h4 className="text-xl font-semibold">Auto-Mint via Bags</h4>
-              <p className="text-sm leading-relaxed">
+              <h4 className="text-xl font-semibold text-white">Auto-Mint via Bags</h4>
+              <p className="text-sm leading-relaxed text-white/40">
                 Tokens are automatically minted using the Bags API, creating a seamless launch process.
               </p>
             </div>
           </div>
 
-          <div className="border-t border-black/20 pt-8 text-center">
-            <p className="text-lg text-black mb-2">
+          <div className="border-t border-white/20 pt-8 text-center">
+            <p className="text-lg text-white mb-2">
               Direct token purchases from the platform
             </p>
-            <p className="text-black font-semibold text-sm">
+            <p className="text-white/40 font-semibold text-sm">
               Coming Soon
             </p>
           </div>

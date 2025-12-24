@@ -9,3 +9,4 @@ Monitor Kalshi probability markets in real-time to detect when confidence thresh
 - API integration files will be added here
 - Placeholder for Kalshi API client and market monitoring logic
 
+
