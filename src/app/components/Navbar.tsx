@@ -7,7 +7,7 @@ export default function Navbar() {
         {/* Left - Logo */}
         <div className="flex items-center">
           <Link href="/">
-            <h1 className="text-2xl font-bold" style={{ color: '#000000', backgroundColor: '#20D55A', borderRadius: '10px', padding: '3px' }}>INSPYR</h1>
+            <h1 className="text-2xl font-bold" style={{ color: '#000000', backgroundColor: '#20D55A', borderRadius: '10px', padding: '3px' }}>KalshiBags</h1>
           </Link>
         </div>
         

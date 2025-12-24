@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center">
               <h2 className="text-xl font-bold" style={{ color: '#000000', backgroundColor: '#20D55A', borderRadius: '10px', padding: '4px 8px' }}>
-                INSPYR
+                KalshiBags
               </h2>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
@@ -151,7 +151,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} INSPYR. All rights reserved.
+              © {new Date().getFullYear()} KalshiBags. All rights reserved.
             </p>
             <p className="text-sm text-gray-400">
               Built with confidence. Powered by <span className="text-[#20D55A]">Kalshi</span> & <span className="text-[#20D55A]">Bags</span>.
